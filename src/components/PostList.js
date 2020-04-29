@@ -9,7 +9,8 @@ import {
     CssBaseline,
     Typography,
     Box,
- 
+    makeStyles,
+
 } from '@material-ui/core';
 
 
@@ -34,6 +35,7 @@ function PostRow(props) {
 
 class PostList extends React.Component {
 
+
     constructor(props) {
         super(props);
         this.state = {
@@ -56,6 +58,14 @@ class PostList extends React.Component {
 
     render() {
 
+        // const useStyles = makeStyles({
+        //     box: {
+        //         margin-bottom: '30px'
+        //     },
+        // });
+
+        // const classes = useStyles();
+
         let listposts = this.state.posts.map((post, index) => {
             return (
                 <PostRow
@@ -75,6 +85,7 @@ class PostList extends React.Component {
                         bgcolor="background.paper"
                         m={3}
                         p={3}
+                        mb={11}
                     >
                         <Typography variant="h1" component="h2">
                             Posts
