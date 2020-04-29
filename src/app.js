@@ -121,19 +121,19 @@ class SearchBar extends React.Component {
   }
 }
 
-class PostList extends React.Component {
+class TList extends React.Component {
 
   constructor(props) {
     super(props);
     this.state = {
       filterText: '',
-      inStockOnly: false
+      inStockOnly: false,
+      apiUrl: 'https://bizzapps.ru/wp-json/wp/v2/posts'
     };
 
     this.handleFilterTextChange = this.handleFilterTextChange.bind(this);
     this.handleInStockChange = this.handleInStockChange.bind(this);
   }
-
 
   handleFilterTextChange(filterText) {
     this.setState({
@@ -167,4 +167,4 @@ class PostList extends React.Component {
   }
 }
 
-export default PostList;
+export default TList;

@@ -1,8 +1,21 @@
 import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
-import PostList from './app.js';
+import TList from './app.js';
+import PostList from './components/PostList.js';
 import './index.css';
 
+
+
+
+
+
+
+
+
+ReactDOM.render(
+  <PostList/>,
+  document.getElementById('app')
+);
 
 
 let PRODUCTS =
@@ -16,6 +29,6 @@ let PRODUCTS =
 ];
 
 ReactDOM.render(
-  <PostList products={PRODUCTS} />,
-  document.getElementById('app')
+  <TList products={PRODUCTS} />,
+  document.getElementById('app-table')
 );
