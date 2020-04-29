@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
-import FilterableProductTable from './app-fil-table.js';
+import PostList from './app.js';
 import './index.css';
 
 
@@ -16,6 +16,6 @@ let PRODUCTS =
 ];
 
 ReactDOM.render(
-  <FilterableProductTable products={PRODUCTS} />,
-  document.getElementById('app-fitable')
+  <PostList products={PRODUCTS} />,
+  document.getElementById('app')
 );

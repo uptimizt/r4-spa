@@ -121,7 +121,7 @@ class SearchBar extends React.Component {
   }
 }
 
-class FilterableProductTable extends React.Component {
+class PostList extends React.Component {
 
   constructor(props) {
     super(props);
@@ -167,4 +167,4 @@ class FilterableProductTable extends React.Component {
   }
 }
 
-export default FilterableProductTable;
+export default PostList;
