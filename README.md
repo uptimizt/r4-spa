@@ -1,3 +1,3 @@
-https://uptimizt.github.io/r4-l7/ 
+https://uptimizt.github.io/r4-spa/
 
 http://localhost:3333
