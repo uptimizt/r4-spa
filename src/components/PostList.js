@@ -1,5 +1,6 @@
-import React from 'react';
+import React, { useState } from 'react';
 import BottomNavigationBar from './BottomNavigationBar.js';
+import Btn from './Btn.js';
 
 import {
     Container,
@@ -42,7 +43,6 @@ class PostList extends React.Component {
             posts: [],
             apiUrl: 'https://bizzapps.ru/wp-json/wp/v2/posts'
         };
-
     }
 
     componentDidMount() {
@@ -57,6 +57,7 @@ class PostList extends React.Component {
     }
 
     render() {
+
 
         // const useStyles = makeStyles({
         //     box: {
@@ -95,9 +96,8 @@ class PostList extends React.Component {
                             {listposts}
                         </List>
 
-                        <Button variant="contained" color="primary">
-                            Hi!
-                        </Button>
+                   
+                        <Btn/>
                     </Box>
 
                 </Container>
