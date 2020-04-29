@@ -1,6 +1,7 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import BottomNavigationBar from './BottomNavigationBar.js';
 import Btn from './Btn.js';
+import useFetch from './useFetch.js';
 
 import {
     Container,
@@ -46,6 +47,9 @@ class PostList extends React.Component {
     }
 
     componentDidMount() {
+
+     
+
         let postUrl = this.state.apiUrl;
         fetch(postUrl)
             .then(data => data.json())
