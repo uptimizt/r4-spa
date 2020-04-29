@@ -2,7 +2,7 @@ version: "3.7"
 
 services:
   app:
-    container_name: app
+    container_name: app-r4-spa
     build:
         context: .
         dockerfile: Dockerfile

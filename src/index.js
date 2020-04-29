@@ -1,17 +1,9 @@
 import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
 import FilterableProductTable from './app-fil-table.js';
-import Game from './app-xo.js';
-import TodoApp from './app-todo.js';
 import './index.css';
 
 
-
-
-ReactDOM.render(
-  <TodoApp />,
-  document.getElementById('app-todo')
-);
 
 let PRODUCTS =
 [
@@ -26,12 +18,4 @@ let PRODUCTS =
 ReactDOM.render(
   <FilterableProductTable products={PRODUCTS} />,
   document.getElementById('app-fitable')
-);
-
-
-
-
-ReactDOM.render(
-  <Game />,
-document.getElementById('app-xo')
 );
