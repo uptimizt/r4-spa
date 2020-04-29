@@ -1,11 +1,36 @@
 import React from 'react';
+import BottomNavigationBar from './BottomNavigationBar.js';
+
+import {
+    Container,
+    List,
+    ListItem,
+    Button,
+    CssBaseline,
+    Typography,
+    Box,
+ 
+} from '@material-ui/core';
 
 
-function PostRow(props){
 
-    return <p>{props.post.title.rendered}</p>;
+
+function PostRow(props) {
+
+    return (
+        <ListItem button className="выаыва">
+            <Typography
+                variant="body1"
+                gutterBottom
+                dangerouslySetInnerHTML={{ __html: props.post.title.rendered }}
+            />
+
+        </ListItem>
+
+    );
 
 }
+
 
 class PostList extends React.Component {
 
@@ -33,7 +58,7 @@ class PostList extends React.Component {
 
         let listposts = this.state.posts.map((post, index) => {
             return (
-                <PostRow 
+                <PostRow
                     post={post}
                     key={index}
                 />
@@ -41,10 +66,34 @@ class PostList extends React.Component {
         })
 
         return (
-            <article>
-                <h1>Posts</h1>
-                {listposts}
-            </article>
+
+            <React.Fragment>
+                <CssBaseline />
+                <Container maxWidth="sm">
+                    <Box
+                        boxShadow={3}
+                        bgcolor="background.paper"
+                        m={3}
+                        p={3}
+                    >
+                        <Typography variant="h1" component="h2">
+                            Posts
+                        </Typography>
+
+                        <List className="posts-list">
+                            {listposts}
+                        </List>
+
+                        <Button variant="contained" color="primary">
+                            Hi!
+                        </Button>
+                    </Box>
+
+                </Container>
+                <BottomNavigationBar />
+            </React.Fragment>
+
+
         );
     }
 }
